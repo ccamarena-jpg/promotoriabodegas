@@ -436,12 +436,12 @@ function renderCompetencia(){
   const cigm=filteredData.filter(r=>hasVal(r['CIGARRERA ML'])).length;
   const ov=filteredData.filter(r=>r['DISP OTRAS MARCAS DE VAPE']&&r['DISP OTRAS MARCAS DE VAPE']!==0).length;
   document.getElementById('comp-metrics').innerHTML=`
-    <div class="metric"><div class="label">Bodegas con ML</div><div class="value">${cm}</div><div class="sub">${pct(cm,filteredData.length)}% del padrón</div></div>
-    <div class="metric"><div class="label">Disp ML</div><div class="value">${dm}</div></div>
-    <div class="metric"><div class="label">Encendedor ML</div><div class="value">${em}</div></div>
-    <div class="metric"><div class="label">Cigarrera ML</div><div class="value">${cigm}</div></div>
-    <div class="metric"><div class="label">Otras marcas vape</div><div class="value">${ov}</div></div>`;
-  const mll=['Comp. JL ML','Disp ML','Encend. ML','Vibrin ML','Exhibidor ML','Cigarrera ML'];
+    <div class="metric"><div class="label">Jalavista Marlboro</div><div class="value">${cm}</div><div class="sub">${pct(cm,filteredData.length)}% del padrón</div></div>
+    <div class="metric"><div class="label">Dispenser Marlboro</div><div class="value">${dm}</div></div>
+    <div class="metric"><div class="label">Encendedor Marlboro</div><div class="value">${em}</div></div>
+    <div class="metric"><div class="label">Cigarrera Marlboro</div><div class="value">${cigm}</div></div>
+    <div class="metric"><div class="label">Dispensers otras marcas vape</div><div class="value">${ov}</div></div>`;
+  const mll=['Jalavista Marlboro','Dispenser Marlboro','Encendedor Marlboro','Vibrin Marlboro','Exhibidor Marlboro','Cigarrera Marlboro'];
   const mlv=[cm,dm,em,vm,exm,cigm];
   const mlc=['#b03030','#b56c00','#1a56a0','#5b3fa0','#1a7a4a','#0a4a38'];
   buildLegend('ml-leg',mll.map((l,i)=>({c:mlc[i],l})));
